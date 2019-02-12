@@ -92,14 +92,14 @@ These are all the command the engine gets from the interface.
 	for example do not use <name> = "draw value".
 	Here are some strings for the example below:
 	   "setoption name Nullmove value true\n"
-      "setoption name Selectivity value 3\n"
+	   "setoption name Selectivity value 3\n"
 	   "setoption name Style value Risky\n"
 	   "setoption name Clear Hash\n"
 	   "setoption name NalimovPath value c:\chess\tb\4;c:\chess\tb\5\n"
 
 * register
 	this is the command to try to register an engine or to tell the engine that registration
-	will be done later. This command should always be sent if the engine	has sent "registration error"
+	will be done later. This command should always be sent if the engine has sent "registration error"
 	at program startup.
 	The following tokens are allowed:
 	* later
@@ -125,7 +125,7 @@ These are all the command the engine gets from the interface.
 * position [fen <fenstring> | startpos ]  moves <move1> .... <movei>
 	set up the position described in fenstring on the internal board and
 	play the moves on the internal chess board.
-	if the game was played  from the start position the string "startpos" will be sent
+	if the game was played from the start position the string "startpos" will be sent
 	Note: no "new" command is needed. However, if this position is from a different game than
 	the last position sent to the engine, the GUI should have sent a "ucinewgame" inbetween.
 
@@ -434,13 +434,13 @@ Examples:
 
 This is how the communication when the engine boots can look like:
 
-GUI     engine
+GUI		engine
 
 // tell the engine to switch to UCI mode
 uci
 
 // engine identify  
-      id name Shredder
+		id name Shredder
 		id author Stefan MK
 
 // engine sends the options it can change
@@ -452,7 +452,7 @@ uci
 		option name NalimovCache type spin default 1 min 1 max 32
 
 // the engine can switch off Nullmove and set the playing style
-	   option name Nullmove type check default true
+		option name Nullmove type check default true
   		option name Style type combo default Normal var Solid var Normal var Risky
 
 // the engine has sent all parameters and is ready
