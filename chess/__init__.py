@@ -1121,7 +1121,7 @@ class BaseBoard:
             piece = self.piece_at(square)
 
             if piece:
-                builder.append(piece.symbol())
+                builder.append(piece.unicode_symbol(invert_color=True))
             else:
                 builder.append(".")
 
