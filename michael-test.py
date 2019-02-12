@@ -3,6 +3,10 @@
 #
 import chess
 import chess.engine
+#import logging
+
+# Enable debug logging.
+#logging.basicConfig(level=logging.DEBUG)
 
 engine = chess.engine.SimpleEngine.popen_uci("stockfish")
 
